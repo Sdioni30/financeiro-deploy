@@ -82,6 +82,7 @@ services:
     command: --interval 300 --label-enable
     environment:
       - WATCHTOWER_CLEANUP=true
+      - DOCKER_API_VERSION=1.41
 
 volumes:
   db_data:
