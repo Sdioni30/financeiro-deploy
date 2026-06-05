@@ -30,6 +30,7 @@ services:
       JWT_SECRET: ${JWT_SECRET}
       JWT_EXPIRATION: ${JWT_EXPIRATION:-7200000}
       CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost}
+      APP_CONTAS_LIBERADAS: ${APP_CONTAS_LIBERADAS:-sdioni30@gmail.com}
     ports:
       - "8080:8080"
 
