@@ -33,6 +33,9 @@ services:
       APP_CONTAS_LIBERADAS: ${APP_CONTAS_LIBERADAS:-sdioni30@gmail.com}
     ports:
       - "8080:8080"
+    networks:
+      - default
+      - internal
 
   frontend:
     build:
@@ -45,6 +48,14 @@ services:
       - backend
     ports:
       - "80:80"
+    networks:
+      - default
+      - internal
 
 volumes:
   db_data:
+
+networks:
+  internal:
+    external: true
+    name: financeiro-deploy_internal
